@@ -15,18 +15,19 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 0.8125rem;
   font-family: "Manrope", sans-serif;
+  font-size: 0.8125rem;
 }
 
 :root {
-  --hidden-background-color: hsl(214, 17%, 51%);
+  --hidden-background-color: hsl(217, 19%, 35%);
   --body-background-color: hsl(210, 46%, 95%);
+  --light-gray: hsl(214, 17%, 51%);
 }
 
 main {
   width: 90vw;
-  height: 90vh;
+  height: 80vh;
   background-color: #fff;
   border-radius: 2rem;
   overflow: hidden;
@@ -34,30 +35,95 @@ main {
   flex-direction: column;
 }
 
-.content {
-  padding: 1rem;
+main img {
+  max-height: 40%;
 }
 
-.row svg {
-  background-color: aqua;
-  border-radius: 50%;
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.content h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+}
+
+.content p {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 .row {
+  height: 91px;
+  padding: 2rem;
+  width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
+.row img {
+  min-height: 3rem;
+  border-radius: 50%;
+}
+
+.row h2 {
+  font-size: 1.2rem;
+}
+
 #btn {
+  min-width: 3rem;
+  min-height: 3rem;
   border: none;
-  background: none;
+  background: var(--body-background-color);
+  border-radius: 50%;
+}
+
+#btn:hover {
+  cursor: pointer;
 }
 
 .hidden {
+  padding: 2rem;
+  width: 100%;
+  text-transform: uppercase;
   display: none;
+  align-items: center;
+  justify-content: space-between;
   background-color: var(--hidden-background-color);
 }
 
-#active {
-  display: flex;
+.hidden h3 {
+  color: var(--body-background-color);
+  letter-spacing: 0.25rem;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+#back-btn {
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--light-gray);
+}
+
+#back-btn path {
+  fill: var(--body-background-color);
+}
+
+#back-btn:hover {
+  cursor: pointer;
+}
+
+@media screen and (width > 25rem) {
 }

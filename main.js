@@ -5,7 +5,7 @@ const backButton = document.getElementById("back-btn");
 
 button.addEventListener("click", () => {
   row.style = "display: none";
-  hidden.style = "display: block";
+  hidden.style = "display: flex";
 });
 
 backButton.addEventListener("click", () => {
