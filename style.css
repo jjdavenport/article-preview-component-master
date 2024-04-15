@@ -59,7 +59,7 @@ main img {
   padding-left: 2rem;
   padding-right: 2rem;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 2;
 }
 
 .row {
@@ -71,8 +71,13 @@ main img {
   justify-content: space-between;
 }
 
-.row img {
-  min-height: 3rem;
+.left {
+  display: flex;
+  gap: 1rem;
+}
+
+.left img {
+  height: 3rem;
   border-radius: 50%;
 }
 
@@ -125,5 +130,28 @@ main img {
   cursor: pointer;
 }
 
-@media screen and (width > 25rem) {
+@media screen and (width >= 25rem) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    height: 50vh;
+    width: 60vw;
+    border-radius: 1rem;
+  }
+  #main-img {
+    object-fit: cover;
+    min-height: 100%;
+    width: 100%;
+  }
+  .content {
+    padding: 1.5rem;
+    display: flex;
+    min-height: 100%;
+  }
+  .content h1 {
+    font-size: 2rem;
+  }
+  .content p {
+    font-size: 1rem;
+  }
 }
