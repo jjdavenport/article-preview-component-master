@@ -114,6 +114,14 @@ main img {
   font-size: 1.5rem;
 }
 
+.hidden-active {
+  display: flex;
+}
+
+.row-hide {
+  display: none;
+}
+
 #back-btn {
   border: none;
   width: 3rem;
