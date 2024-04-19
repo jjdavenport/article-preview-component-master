@@ -138,11 +138,11 @@ main img {
   cursor: pointer;
 }
 
-@media screen and (width >= 25rem) {
+@media screen and (width >= 35rem) {
   main {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    height: 50vh;
+    height: 40vh;
     width: 60vw;
     border-radius: 1rem;
   }
@@ -157,9 +157,22 @@ main img {
     min-height: 100%;
   }
   .content h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .content p {
     font-size: 1rem;
+  }
+  .row {
+    position: relative;
+  }
+  .hidden {
+    height: 2.5rem;
+    width: 15.625rem;
+    position: absolute;
+    bottom: 6.25rem;
+    left: 6.25rem;
+  }
+  .row-desktop {
+    display: flex;
   }
 }

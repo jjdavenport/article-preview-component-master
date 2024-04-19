@@ -4,11 +4,21 @@ const hidden = document.querySelector(".hidden");
 const backButton = document.getElementById("back-btn");
 
 button.addEventListener("click", () => {
-  hidden.classList.toggle("hidden-active");
-  row.classList.toggle("row-hide");
+  const width = window.innerWidth;
+  if (width < 560) {
+    hidden.classList.toggle("hidden-active");
+    row.classList.toggle("row-hide");
+  } else {
+    hidden.classList.toggle("hidden-active");
+  }
 });
 
 backButton.addEventListener("click", () => {
-  row.classList.toggle("row-hide");
-  hidden.classList.toggle("hidden-active");
+  const width = window.innerWidth;
+  if (width < 560) {
+    hidden.classList.toggle("hidden-active");
+    row.classList.toggle("row-hide");
+  } else {
+    hidden.classList.toggle("hidden-active");
+  }
 });
