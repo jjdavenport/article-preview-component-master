@@ -93,7 +93,7 @@ main img {
 }
 
 #btn:hover {
-  background: var(--hidden-background-color);
+  background: var(--light-gray);
 }
 
 .mobile {
@@ -101,16 +101,15 @@ main img {
 }
 
 .desktop {
-  background: var(--hidden-background-color);
-  fill: white;
+  background: var(--light-gray);
 }
 
 #btn:hover {
   cursor: pointer;
 }
 
-.path-fill {
-  fill: white;
+.path-desktop {
+  fill: #fff;
 }
 
 .hidden {
