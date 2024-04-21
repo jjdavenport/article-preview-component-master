@@ -16,7 +16,6 @@ backButton.addEventListener("click", () => {
 
 button.addEventListener("click", () => {
   const width = window.innerWidth;
-  buttonClicked = true;
   if (width < 560) {
     hidden.classList.toggle("hidden-active");
     row.classList.toggle("row-hide");

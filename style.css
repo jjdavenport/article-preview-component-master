@@ -23,6 +23,7 @@ body {
   --hidden-background-color: hsl(217, 19%, 35%);
   --body-background-color: hsl(210, 46%, 95%);
   --light-gray: hsl(214, 17%, 51%);
+  --gray-blue-font-color: hsl(212, 23%, 69%);
 }
 
 main {
@@ -35,8 +36,16 @@ main {
   flex-direction: column;
 }
 
-main img {
-  max-height: 40%;
+.img-contain {
+  display: flex;
+  position: relative;
+  height: 40%;
+}
+
+.img-contain img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .content {
@@ -53,9 +62,11 @@ main img {
   padding-left: 2rem;
   padding-right: 2rem;
   padding-top: 2rem;
+  color: hsl(217, 19%, 35%);
 }
 
 .content p {
+  color: hsl(217, 19%, 35%);
   padding-left: 2rem;
   padding-right: 2rem;
   font-weight: 500;
@@ -81,8 +92,16 @@ main img {
   border-radius: 50%;
 }
 
-.row h2 {
+.left h2 span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--light-gray);
+}
+
+.left h2 {
+  color: hsl(217, 19%, 35%);
   font-size: 1.2rem;
+  font-weight: 700;
 }
 
 #btn {
@@ -123,8 +142,8 @@ main img {
 }
 
 .hidden h3 {
-  color: var(--body-background-color);
-  letter-spacing: 0.25rem;
+  color: var(--light-gray);
+  letter-spacing: 0.5rem;
   font-weight: 500;
   font-size: 1.5rem;
 }
@@ -153,40 +172,47 @@ main img {
   cursor: pointer;
 }
 
-@media screen and (width >= 35rem) {
+@media screen and (width >= 45rem) {
   main {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    height: 40vh;
-    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    height: 22rem;
+    width: 51rem;
     border-radius: 1rem;
+    position: relative;
+    overflow: initial;
   }
-  #main-img {
-    object-fit: cover;
-    min-height: 100%;
-    width: 100%;
+  .img-contain {
+    height: 100%;
+    width: 60%;
+  }
+  .img-contain img {
+    overflow: hidden;
+    border-radius: 1rem 0 0 1rem;
   }
   .content {
-    padding: 1.5rem;
-    display: flex;
-    min-height: 100%;
-  }
-  .content h1 {
-    font-size: 1.8rem;
-  }
-  .content p {
-    font-size: 1rem;
-  }
-  .row {
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
     position: relative;
   }
+  .content h1 {
+    font-size: 1.5rem;
+  }
+  .content p {
+    line-height: 1.6;
+    font-size: 1rem;
+  }
   .hidden {
+    position: absolute;
     height: 2.5rem;
-    width: 15.625rem;
-    position: fixed;
-    bottom: 40%;
-    left: 62%;
-    border-radius: 1rem;
+    width: 18.75rem;
+    border-radius: 1.1rem;
+    bottom: 90px;
+    left: 245px;
+  }
+  .hidden h3 {
+    font-size: 1rem;
   }
   #back-btn {
     display: none;
