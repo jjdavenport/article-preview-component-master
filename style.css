@@ -177,7 +177,7 @@ main {
     display: flex;
     flex-direction: row;
     height: 22rem;
-    width: 51rem;
+    width: 60rem;
     border-radius: 1rem;
     position: relative;
     overflow: initial;
@@ -208,8 +208,8 @@ main {
     height: 2.5rem;
     width: 18.75rem;
     border-radius: 1.1rem;
-    bottom: 90px;
-    left: 245px;
+    bottom: 30%;
+    left: 65%;
   }
   .hidden h3 {
     font-size: 1rem;
@@ -225,8 +225,8 @@ main {
     transform: translateX(-50%);
     width: 0;
     height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid var(--hidden-background-color);
+    border-left: 0.625rem solid transparent;
+    border-right: 0.625rem solid transparent;
+    border-top: 0.625rem solid var(--hidden-background-color);
   }
 }
