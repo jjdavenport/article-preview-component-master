@@ -6,7 +6,7 @@ const btnPath = document.getElementById("btn-path");
 
 backButton.addEventListener("click", () => {
   const width = window.innerWidth;
-  if (width < 560) {
+  if (width < 720) {
     hidden.classList.toggle("hidden-active");
     row.classList.toggle("row-hide");
   } else {
@@ -16,7 +16,7 @@ backButton.addEventListener("click", () => {
 
 button.addEventListener("click", () => {
   const width = window.innerWidth;
-  if (width < 560) {
+  if (width < 720) {
     hidden.classList.toggle("hidden-active");
     row.classList.toggle("row-hide");
   } else {
