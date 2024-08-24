@@ -4,9 +4,9 @@ import data from "./assets/data.json";
 const ShareMobile = ({ onClose }) => {
   return (
     <>
-      <div className="flex bg-black">
-        <p>{data.share}</p>
-        <ul>
+      <div className="flex">
+        <p className="uppercase tracking-widest">{data.share}</p>
+        <ul className="flex">
           {icons.map((i) => (
             <li key={i.img}>
               <img src={i.img} />
