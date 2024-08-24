@@ -7,27 +7,43 @@ import { useMediaQuery } from "react-responsive";
 const Card = () => {
   const desktop = useMediaQuery({ minWidth: 768 });
   const [active, setActive] = useState(false);
-  const open = () => {
-    setActive(true);
-  };
   const toggle = () => {
     setActive(!active);
   };
   return (
     <>
-      <main>
-        <img src={data.image} />
-        <p></p>
+      <main className="rounded-lg">
+        <img className="overflow-hidden" src={data.image} />
+        <p>{data.p}</p>
         <div className="relative">
-          <div>
-            <img src={data.profilePicture} />
-            <span>{data.name}</span>
-            <span>{data.date}</span>
-            <button onClick={desktop ? toggle : open}>
-              <img src={data.icon} />
-            </button>
-            {desktop ? <ShareDesktop /> : <ShareMobile />}
-          </div>
+          {!desktop ? (
+            !active && (
+              <div className="flex">
+                <img src={data.profilePicture} alt="Profile" />
+                <span>{data.name}</span>
+                <span>{data.date}</span>
+                <button onClick={toggle}>
+                  <img src={data.icon} alt="Toggle" />
+                </button>
+              </div>
+            )
+          ) : (
+            <div className="flex">
+              <img src={data.profilePicture} alt="Profile" />
+              <span>{data.name}</span>
+              <span>{data.date}</span>
+              <button onClick={toggle}>
+                <img src={data.icon} alt="Toggle" />
+              </button>
+            </div>
+          )}
+          {active ? (
+            desktop ? (
+              <ShareDesktop />
+            ) : (
+              <ShareMobile onClose={toggle} />
+            )
+          ) : null}
         </div>
       </main>
     </>

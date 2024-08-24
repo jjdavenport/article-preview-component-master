@@ -4,7 +4,7 @@ import data from "./assets/icons.json";
 const ShareDesktop = () => {
   return (
     <>
-      <div className="flex">
+      <div className="flex bg-black">
         <p>{data.share}</p>
         <ul>
           {icons.map((i) => (

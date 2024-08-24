@@ -1,15 +1,10 @@
 import icons from "./assets/icons.json";
 import data from "./assets/data.json";
-import { useState } from "react";
 
-const ShareMobile = () => {
-  const [button, setButton] = useState(false);
-  const open = () => {
-    setButton(true);
-  };
+const ShareMobile = ({ onClose }) => {
   return (
     <>
-      <div className="flex">
+      <div className="flex bg-black">
         <p>{data.share}</p>
         <ul>
           {icons.map((i) => (
@@ -18,7 +13,7 @@ const ShareMobile = () => {
             </li>
           ))}
         </ul>
-        <button onClick={open}>
+        <button onClick={onClose}>
           <img src={data.icon} />
         </button>
       </div>
