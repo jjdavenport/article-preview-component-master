@@ -1,8 +1,11 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: ["./src/**/*.{html,js,jsx}", "./index.html"],
   theme: {
     extend: {
+      fontSize: {
+        customSize: ".8125rem",
+      },
       fontFamily: {
         custom: ["manrope", "sans-serif"],
       },

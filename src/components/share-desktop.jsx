@@ -1,18 +1,25 @@
-import icons from "./assets/icons.json";
-import data from "./assets/data.json";
+import facebookIcon from "./assets/icon-facebook.svg";
+import twitterIcon from "./assets/icon-twitter.svg";
+import pinterestIcon from "./assets/icon-pinterest.svg";
 
 const ShareDesktop = () => {
   return (
     <>
-      <div className="absolute -right-5 -top-10 z-10 m-0 flex border-none p-0">
-        <p>{data.share}</p>
-        <ul className="flex">
-          {icons.map((i) => (
-            <li key={i.img}>
-              <img src={i.img} />
+      <div className="absolute right-0">
+        <dialog className="z-50 m-0 flex border-none p-0">
+          <p>Share</p>
+          <ul className="flex">
+            <li>
+              <img src={facebookIcon} />
             </li>
-          ))}
-        </ul>
+            <li>
+              <img src={twitterIcon} />
+            </li>
+            <li>
+              <img src={pinterestIcon} />
+            </li>
+          </ul>
+        </dialog>
       </div>
     </>
   );
