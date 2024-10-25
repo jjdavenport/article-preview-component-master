@@ -24,7 +24,7 @@ const ShareMobile = ({ onClose, active }) => {
         </div>
         <button
           onClick={onClose}
-          className={`${active ? "bg-grayishBlue" : "hover:bg-veryDarkGrayishBlue"} group h-fit cursor-pointer rounded-full bg-lightGrayishBlue p-3 transition duration-700 ease-in-out`}
+          className={`${active ? "bg-desaturatedDarkBlue" : "hover:bg-veryDarkGrayishBlue"} group h-fit cursor-pointer rounded-full bg-lightGrayishBlue p-3 transition duration-700 ease-in-out`}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
             <path
