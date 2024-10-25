@@ -2,10 +2,12 @@ import facebookIcon from "./assets/icon-facebook.svg";
 import twitterIcon from "./assets/icon-twitter.svg";
 import pinterestIcon from "./assets/icon-pinterest.svg";
 
-const ShareDesktop = () => {
+const ShareDesktop = ({ active }) => {
   return (
     <>
-      <div className="absolute -right-[60px] -top-20">
+      <div
+        className={`absolute -right-[60px] -top-20 ${active ? "scale-100 opacity-100" : "scale-95 opacity-0"} transition-all duration-300`}
+      >
         <dialog className="relative z-50 m-0 flex items-center gap-3 rounded-lg border-none bg-veryDarkGrayishBlue px-10 py-4">
           <span className="uppercase tracking-[0.3em] text-grayishBlue">
             Share
