@@ -20,13 +20,13 @@ const Card = () => {
             src={hero}
           />
         </div>
-        <article className="flex flex-col gap-2 md:w-[500px] md:min-w-[490px] md:gap-6">
+        <article className="flex flex-col gap-4 md:w-[500px] md:min-w-[490px] md:gap-6">
           <div className="flex flex-col justify-evenly gap-4 px-8 pt-8 md:px-10 md:pb-0">
-            <h1 className="text-base font-bold md:text-2xl">
+            <h1 className="text-base font-bold text-veryDarkGrayishBlue md:text-2xl">
               Shift the overall look and feel by adding these wonderful touches
               to furniture in your home
             </h1>
-            <p className="font-medium leading-5">
+            <p className="font-medium leading-[1.35rem] text-desaturatedDarkBlue">
               Ever been in a room and felt like something was missing? Perhaps
               it felt slightly bare and uninviting. I’ve got some simple tips to
               help you make any room feel complete.
@@ -38,16 +38,20 @@ const Card = () => {
             ) : (
               <>
                 {active && <ShareDesktop />}
-                <div className="flex h-fit items-center justify-between px-8 py-4 md:px-10 md:pb-10 md:pt-0">
-                  <div className="flex items-center gap-2">
+                <div className="flex items-center justify-between px-8 py-4 md:px-10 md:pb-10 md:pt-0">
+                  <div className="flex items-center gap-4">
                     <img
                       className="h-10 w-10 rounded-full"
                       src={avatar}
                       alt="Profile"
                     />
                     <div className="flex flex-col">
-                      <span className="text-sm">Michelle Appleton</span>
-                      <span>28 Jun 2020</span>
+                      <span className="text-sm font-bold text-veryDarkGrayishBlue">
+                        Michelle Appleton
+                      </span>
+                      <span className="font-medium text-grayishBlue">
+                        28 Jun 2020
+                      </span>
                     </div>
                   </div>
                   <button

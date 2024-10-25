@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <div className="flex h-full min-h-screen flex-col justify-between bg-lightGrayishBlue font-custom text-customSize">
-        <div className="flex flex-1 items-center justify-center p-6 md:p-2">
+        <div className="flex flex-1 items-center justify-center p-6 font-medium md:p-2">
           <Card />
         </div>
         <Footer />
