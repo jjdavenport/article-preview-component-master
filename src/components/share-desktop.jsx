@@ -5,7 +5,7 @@ import pinterestIcon from "./assets/icon-pinterest.svg";
 const ShareDesktop = () => {
   return (
     <>
-      <div className="absolute right-72">
+      <div className="absolute -top-20 right-40">
         <dialog className="z-50 m-0 flex items-center gap-3 rounded-lg border-none bg-veryDarkGrayishBlue px-8 py-4">
           <span className="uppercase tracking-widest text-desaturatedDarkBlue">
             Share

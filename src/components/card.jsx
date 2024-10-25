@@ -13,25 +13,32 @@ const Card = () => {
   };
   return (
     <>
-      <main className="flex flex-col overflow-hidden rounded-2xl bg-white md:max-w-[800px] md:flex-row">
-        <img className="flex w-5/12 object-cover object-left" src={hero} />
-        <article className="flex flex-col justify-evenly gap-4 p-4 md:p-10">
-          <h1 className="w-96 text-2xl font-bold">
-            Shift the overall look and feel by adding these wonderful touches to
-            furniture in your home
-          </h1>
-          <p className="wp-96 font-medium">
-            Ever been in a room and felt like something was missing? Perhaps it
-            felt slightly bare and uninviting. I’ve got some simple tips to help
-            you make any room feel complete.
-          </p>
+      <main className="flex flex-col overflow-hidden rounded-2xl bg-white md:max-w-[70vw] md:flex-row md:overflow-visible">
+        <div>
+          <img
+            className="flex w-full object-cover md:h-full md:w-[300px] md:rounded-l-2xl md:object-left"
+            src={hero}
+          />
+        </div>
+        <article className="flex flex-col gap-2 md:w-[500px] md:min-w-[490px] md:gap-6">
+          <div className="flex flex-col justify-evenly gap-4 px-8 pt-8 md:px-10 md:pb-0">
+            <h1 className="text-base font-bold md:text-2xl">
+              Shift the overall look and feel by adding these wonderful touches
+              to furniture in your home
+            </h1>
+            <p className="font-medium leading-5">
+              Ever been in a room and felt like something was missing? Perhaps
+              it felt slightly bare and uninviting. I’ve got some simple tips to
+              help you make any room feel complete.
+            </p>
+          </div>
           <div className="relative">
             {!desktop && active ? (
-              <ShareMobile onClose={toggle} />
+              <ShareMobile active={active} onClose={toggle} />
             ) : (
               <>
                 {active && <ShareDesktop />}
-                <div className="flex items-center justify-between">
+                <div className="flex h-fit items-center justify-between px-8 py-4 md:px-10 md:pb-10 md:pt-0">
                   <div className="flex items-center gap-2">
                     <img
                       className="h-10 w-10 rounded-full"
@@ -39,13 +46,13 @@ const Card = () => {
                       alt="Profile"
                     />
                     <div className="flex flex-col">
-                      <span>Michelle Appleton</span>
+                      <span className="text-sm">Michelle Appleton</span>
                       <span>28 Jun 2020</span>
                     </div>
                   </div>
                   <button
                     onClick={toggle}
-                    className={`${active ? "bg-veryDarkGrayishBlue" : "hover:bg-veryDarkGrayishBlue"} group rounded-full bg-lightGrayishBlue p-3 transition duration-700 ease-in-out`}
+                    className={`${active ? "bg-veryDarkGrayishBlue" : "hover:bg-veryDarkGrayishBlue"} group cursor-pointer rounded-full bg-lightGrayishBlue p-3 transition duration-700 ease-in-out`}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
