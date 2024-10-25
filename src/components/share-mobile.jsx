@@ -5,7 +5,9 @@ import pinterestIcon from "./assets/icon-pinterest.svg";
 const ShareMobile = ({ onClose, active }) => {
   return (
     <>
-      <div className="flex h-[72px] w-full items-center justify-between bg-veryDarkGrayishBlue px-8 py-4">
+      <div
+        className={`${active ? "-translate-y-0" : "-translate-y-100"} flex h-[72px] w-full transform items-center justify-between bg-veryDarkGrayishBlue px-8 py-4 duration-300 ease-in-out`}
+      >
         <div className="flex items-center gap-3">
           <span className="uppercase tracking-[0.3em] text-grayishBlue">
             Share
@@ -24,7 +26,7 @@ const ShareMobile = ({ onClose, active }) => {
         </div>
         <button
           onClick={onClose}
-          className={`${active ? "bg-desaturatedDarkBlue" : "hover:bg-veryDarkGrayishBlue"} group h-fit cursor-pointer rounded-full bg-lightGrayishBlue p-3 transition duration-700 ease-in-out`}
+          className={`${active ? "bg-grayishBlue" : "hover:bg-veryDarkGrayishBlue"} group h-fit cursor-pointer rounded-full bg-lightGrayishBlue p-3 transition duration-700 ease-in-out`}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13">
             <path
