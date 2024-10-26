@@ -3,7 +3,6 @@ import ShareDesktop from "./share-desktop";
 import hero from "./assets/drawers.jpg";
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import { useSpring, animated } from "react-spring";
 import LowerDiv from "./lower-div";
 
 const Card = () => {
@@ -11,14 +10,8 @@ const Card = () => {
   const [active, setActive] = useState(false);
 
   const toggle = () => {
-    setActive(!active);
+    setActive((prev) => !prev);
   };
-
-  const springProps = useSpring({
-    opacity: active ? 1 : 0,
-    transform: active ? "translateY(0)" : "translateY(20px)",
-    config: { tension: 250, friction: 20 },
-  });
 
   return (
     <main className="flex flex-col overflow-hidden rounded-2xl bg-white md:max-w-[70vw] md:flex-row md:overflow-visible">
@@ -43,12 +36,13 @@ const Card = () => {
         </div>
         <div className="relative">
           {desktop && <ShareDesktop active={active} />}
-          {desktop || !active ? (
+          {desktop ? (
             <LowerDiv active={active} onClick={toggle} />
           ) : (
-            <animated.div style={springProps}>
+            <>
+              <LowerDiv active={active} onClick={toggle} />
               <ShareMobile active={active} onClose={toggle} />
-            </animated.div>
+            </>
           )}
         </div>
       </article>
